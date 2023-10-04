@@ -18,23 +18,18 @@
 		<a class="btn devis" href="mailto:contact@print-it.tld">Devis</a>
 	</header>
 	<main>
-		<section id="banner">
-			<img class="banner-img" src=''> 
-
-			<div class="arrow">
-				<button id="prev">
-					<img class="arrow_left" src="./assets/images/arrow_left.png" alt="Left arrow">
-				</button>
-<!-- Intégrer ici le tableau des slides -->
-				<button id="next">
-					<img class="arrow_right" src="./assets/images/arrow_right.png" alt="Right arrow">
-				</button>
+		<section class="arrow">
+			<button id="prevButton" class="arrow_left">
+				<img  src="./assets/images/arrow_left.png" alt="Slide précédente">
+			</button>
+			<div class="slides-container">
+				<!-- Les slides seront générées ici -->
 			</div>
-			<div class="dots"><!-- Remplacer chaque image par leur lien -->
-				<p class="dot">image 1</p>
-				<p class="dot">image 2</p>
-				<p class="dot">image 3</p>
-				<p class="dot">image 4</p>
+			<button id="nextButton" class="arrow_right">
+				<img src="./assets/images/arrow_right.png" alt="Slide suivante">
+			</button>
+			<div class="dots">
+				<!-- Les dots seront générés ici -->
 			</div>
 		</section>
 		<section id="about-us" class="container">
