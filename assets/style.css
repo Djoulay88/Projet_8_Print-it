@@ -126,8 +126,12 @@ header {
 .arrow {
 	width: 100%;
 	display: flex;
-	justify-content: space-between;
-	
+	justify-content: space-between;	
+}
+button{
+	border: none;
+	background-color: transparent;
+	cursor: pointer;
 }
 .arrow_left {
 	margin-left: 10px;
