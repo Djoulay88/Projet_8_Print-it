@@ -1,8 +1,13 @@
 const prevButton = document.getElementById("prev");
-const nextButton = document.getElementById("next");
+prevButton.addEventListener("click", () => {
+    console.log("Slide précédente")
+});
 
-prevButton.addEventListener("click", slidePrevious);
-nextButton.addEventListener("click", slideNext);
+
+const nextButton = document.getElementById("next");
+nextButton.addEventListener("click", () => {
+    console.log("Slide suivante")
+});
 
 
 
