@@ -116,46 +116,30 @@ header {
 .banner-img {
 	position: absolute;
 	width: 100%;
-	max-width: 100%;
-	height: auto;
+	height: 100%;
 	z-index: -1;
 	object-fit: cover;
 	object-position: center;
 }
 /* Code CSS en prévision de l'ajout d'un carousel pour la bannière */
 /* Gestion des fleches du carrousel */
-.slides-container {
-	display: flex;
-	transition: transform 0.5s ease-in-out;
-	width: 100%;
-}
-.hidden {
-	display: none;
-  }
-.arrow {
-	width: 100%;
-	display: flex;
-	justify-content: space-between;	
-}
-button{
-	border: none;
+#banner .arrow {
+	position: absolute;
 	background-color: transparent;
-
-}
-.arrow_left {
-	margin-left: 10px;
+	border: transparent;
 	cursor: pointer;
 }
-.arrow_right {
-	margin-right: 10px;
-	cursor: pointer;
+#banner .arrow_left {
+	left: 10px;
+}
+#banner .arrow_right {
+	right: 10px;
 }
 /* Gestion des points du carrousel */
 .dots {
 	position: absolute;
 	bottom: 40px;
 	display: flex;
-	justify-content: center;
 }
 .dot {
 	margin-inline: 5px;
@@ -164,8 +148,7 @@ button{
 	background-color: #ffffff00;
 	border: 3px solid #fff;
 	border-radius: 100%;
-	box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-	cursor: pointer;
+	box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);;
 }
 .dot_selected {
 	background-color: #fff;
