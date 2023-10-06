@@ -21,3 +21,6 @@ const slides = [
 // Déclaration des variables :
 const prevButton = document.getElementById("Prev") // Flèche gauche
 const nextButton = document.getElementById("Next") // Flèche droite
+const nbDots = slides.length // Nombre de dots nécéssaires
+const dots = document.querySelector('.dots') // Déclaration de la class "dots" en tant que conteneur pour les span dont la class est "dot"
+
