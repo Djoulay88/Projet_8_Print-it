@@ -27,3 +27,4 @@ const dotSelected = document.querySelector('.dot_selected')
 const slide = document.getElementById("banner")
 const imgSuppr = slide.querySelector("img"); // Déclaration de variable à supprimer
 const pSuppr = slide.querySelector("p"); // Déclaration de variable à supprimer
+let slideIndex = 0
