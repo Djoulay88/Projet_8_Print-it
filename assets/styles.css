@@ -38,6 +38,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+	background-color: blue; /*a supprimer avant soutenance*/
 }
 ol, ul {
 	list-style: none;

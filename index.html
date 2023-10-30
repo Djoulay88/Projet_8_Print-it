@@ -8,7 +8,8 @@
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Roboto+Slab:wght@400;900&display=swap" rel="stylesheet">
-
+		<script src="./assets/scripts/globales.js" defer></script>
+		<script src="./assets/scripts/scripts.js" defer></script>
 	</head>
 	<body>
 		<header class="container">
@@ -19,11 +20,18 @@
 		</header>
 		<main>
 			<section id="banner">
-				<img class="banner-img" src="./assets/images/slideshow/slide1.jpg" alt="Banner Print-it">
-				<p>Impressions tous formats <span>en boutique et en ligne</span></p>
 				<div class="dots"></div>
-				<button id="Prev" class="arrow arrow_left"><img src="./assets/images/arrow_left.png"></button>
-				<button id="Next" class="arrow arrow_right"><img src="./assets/images/arrow_right.png"></button>
+				<button id="Prev" class="arrow arrow_left">
+					<img src="./assets/images/arrow_left.png">
+				</button>
+				<button id="Next" class="arrow arrow_right">
+					<img src="./assets/images/arrow_right.png">
+				</button>
+				<img id="img" src="./assets/images/slideshow/slide1.jpg" alt="Banner Print-it" class="banner-img">
+				<p id="p">
+					Impressions tous formats
+					<span>en boutique et en ligne</span>
+				</p>
 			</section>
 			<section id="about-us" class="container">
 				<div>
@@ -126,6 +134,5 @@
 			</div>
 		</footer>
 	</body>
-	<script src="./assets/scripts/globales.js"></script>
-	<script src="./assets/scripts/scripts.js"></script>
+
 </html>
