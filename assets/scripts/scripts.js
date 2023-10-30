@@ -45,26 +45,14 @@ function changeDot() { // Mise à jour de l'activation de la classe "dot_selecte
 }
 changeDot()
 
-// Suppression de la slide déjà presente
-function suppSlide () {
-    if (imgSuppr) { //suppression du contenu existant
-        imgSuppr.remove();
-    }
-    console.log("Image supprimée");
-    if (pSuppr) { //suppression du contenu existant
-        pSuppr.remove();
-    }
-    console.log("paragraphe supprimé");
-}
-
-// Création de la structure des slides en fonction de l'index
+// Suppression de la slide déjà presente et création de la structure des slides en fonction de l'index
 function createSlide (i) {
     let HTML = `
         <img id="img" src="${slides[i].image}" alt="Image ${i + 1}" class="banner-img">
         <p id="p">${slides[i].tagLine}</p>
         `;
     console.log("slide ajoutée");
-    slide.innerHTML += HTML // Ajout du nouveau contenu HTML
+    slide.innerHTML = HTML // Ajout du nouveau contenu HTML
 }
 
 function prevSlide() {
@@ -72,7 +60,6 @@ function prevSlide() {
     if (slideIndex < 0) {
         slideIndex = nbDots - 1; // Retour à l'index 3 si l'index était à 0
     }
-    suppSlide ()
     createSlide(slideIndex);
     changeDot();
 }
@@ -82,7 +69,6 @@ function nextSlide() {
     if (slideIndex >= nbDots) {
         slideIndex = 0; // Retour à l'index 0 si l'index était à 3
     }
-    suppSlide ()
     createSlide(slideIndex);
     changeDot();
 }
