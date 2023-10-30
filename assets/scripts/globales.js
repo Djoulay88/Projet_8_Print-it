@@ -27,4 +27,4 @@ const dotSelected = document.querySelector('.dot_selected')
 const slide = document.getElementById("carrousel")
 const imgSuppr = document.getElementById("img"); // Déclaration de variable à supprimer
 const pSuppr = document.getElementById("p"); // Déclaration de variable à supprimer
-let slideIndex = 0
+let slideIndex = 0; // Définition de l'index 0 comme slide de référence

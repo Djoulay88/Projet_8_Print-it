@@ -1,7 +1,8 @@
 // Vérification chargement du DOM
 document.addEventListener("DOMContentLoaded", () => {
-    console.log("HTML chargé");
+    //console.log("HTML chargé"); // Retour console bon fonctionnement
     addEvent();
+    dotClick ();
 });
 
 // Ajout des EventListener sur les deux flèches
@@ -16,7 +17,7 @@ function addEvent() {
     });
 }
 
-console.log("Le nombre d'éléments dans le tableau est : " + nbDots); // Contrôle du nombre de dots
+// console.log("Le nombre d'éléments dans le tableau est : " + nbDots); // Contrôle du nombre de dots
 
 // Ajout des dots en bas de l'image
 function addDots() {
@@ -29,9 +30,10 @@ function addDots() {
     if (nbDots > 0) { // Activation du 1er dot au chargement du DOM
         const firstDot = document.querySelector('.dot');
         firstDot.classList.add('dot_selected');
-    }    
+    }
 }
 addDots()
+
 
 function changeDot() { // Mise à jour de l'activation de la classe "dot_selected" selon la slide active
     const allDots = document.querySelectorAll('.dot');
@@ -51,11 +53,11 @@ function createSlide (i) {
         <img id="img" src="${slides[i].image}" alt="Image ${i + 1}" class="banner-img">
         <p id="p">${slides[i].tagLine}</p>
         `;
-    console.log("slide ajoutée");
+    //console.log("slide ajoutée"); // Retour console bon fonctionnement
     slide.innerHTML = HTML // Ajout du nouveau contenu HTML
 }
 
-function prevSlide() {
+function prevSlide() { // Fonction ajoutée sur la flèche Prev
     slideIndex--; // Décrémentation de 1 de la valeur de l'index
     if (slideIndex < 0) {
         slideIndex = nbDots - 1; // Retour à l'index 3 si l'index était à 0
@@ -64,11 +66,24 @@ function prevSlide() {
     changeDot();
 }
 
-function nextSlide() {
+function nextSlide() { // Fonction ajoutée sur la flèche Next
     slideIndex++; // Incrémentation de 1 de la valeur de l'index
     if (slideIndex >= nbDots) {
         slideIndex = 0; // Retour à l'index 0 si l'index était à 3
     }
     createSlide(slideIndex);
     changeDot();
+}
+
+// Bonus : dots cliquables
+function dotClick() {
+    const allDots = document.querySelectorAll('.dot');
+    allDots.forEach((dot, i) => {
+        dot.addEventListener("click", () => {
+            slideIndex = i; // Annulation de l'index à 0
+            createSlide(slideIndex);
+            changeDot();
+            //console.log("Dot cliqué n° " + (i + 1)); // Retour console bon fonctionnement
+        });
+    });
 }
