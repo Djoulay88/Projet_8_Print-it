@@ -102,15 +102,6 @@ header {
 	background-color: var(--secondary-color);
 }
 
-#carrousel {
-	box-sizing: content-box;
-	width: 100%;
-	min-height: 470px;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-}
-
 #banner {
 	display: flex;
 	flex-direction: column;
@@ -130,6 +121,15 @@ header {
 	object-position: center;
 }
 /* Code CSS en prévision de l'ajout d'un carousel pour la bannière */
+/* Gestion de la div contenant les slides du carrousel */
+#carrousel {
+	box-sizing: content-box;
+	width: 100%;
+	min-height: 470px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
 /* Gestion des fleches du carrousel */
 #banner .arrow {
 	position: absolute;

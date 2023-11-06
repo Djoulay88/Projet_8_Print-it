@@ -25,6 +25,4 @@ const nbDots = slides.length // Nombre de dots nécéssaires
 const dots = document.querySelector('.dots') // Déclaration de la class "dots" en tant que conteneur pour les span dont la class est "dot"
 const dotSelected = document.querySelector('.dot_selected')
 const slide = document.getElementById("carrousel")
-const imgSuppr = document.getElementById("img"); // Déclaration de variable à supprimer
-const pSuppr = document.getElementById("p"); // Déclaration de variable à supprimer
 let slideIndex = 0; // Définition de l'index 0 comme slide de référence
