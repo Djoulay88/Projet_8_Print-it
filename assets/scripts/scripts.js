@@ -1,21 +1,17 @@
 // Vérification chargement du DOM
 document.addEventListener("DOMContentLoaded", () => {
-    //console.log("HTML chargé"); // Retour console bon fonctionnement
-    addEvent();
-    dotClick ();
+    console.log("HTML chargé"); // Retour console bon fonctionnement
 });
 
 // Ajout des EventListener sur les deux flèches
-function addEvent() {
-    prevButton.addEventListener("click", () => { // Event sur la flèche gauche
-        console.log("Le bouton Prev fonctionne");
-        prevSlide();
-    });
-    nextButton.addEventListener("click", () => { // Event sur la flèche droite
-        console.log("Le bouton Next fonctionne");
-        nextSlide();
-    });
-}
+prevButton.addEventListener("click", () => { // Event sur la flèche gauche
+    console.log("Le bouton Prev fonctionne");
+    prevSlide();
+});
+nextButton.addEventListener("click", () => { // Event sur la flèche droite
+    console.log("Le bouton Next fonctionne");
+    nextSlide();
+});
 
 // console.log("Le nombre d'éléments dans le tableau est : " + nbDots); // Contrôle du nombre de dots
 
@@ -87,3 +83,4 @@ function dotClick() {
         });
     });
 }
+dotClick()
